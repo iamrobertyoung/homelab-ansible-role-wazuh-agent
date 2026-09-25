@@ -1,4 +1,4 @@
-molecule>=24.0.0
+molecule>=26.8.0
 molecule-plugins[docker]>=23.5.0
 ansible-core>=2.15
 docker>=6.0.0
