@@ -2,7 +2,6 @@
   "branches": [
     "main"
   ],
-  "repositoryUrl": "https://github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent",
   "plugins": [
     [
       "@semantic-release/commit-analyzer",

@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: Questions
-    url: https://github.com/RobertYoung/homelab-ansible-role-wazuh-agent/discussions
+    url: https://github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent/discussions
     about: Ask questions in GitHub Discussions
