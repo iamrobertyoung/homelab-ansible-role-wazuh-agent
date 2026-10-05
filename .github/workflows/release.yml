@@ -31,7 +31,7 @@ jobs:
       # Security: Harden runner environment and restrict egress traffic
       # See: https://github.com/step-security/harden-runner
       - name: Harden Runner
-        uses: step-security/harden-runner@20cf305ff2072d973412fa9b1e3a4f227bda3c76 # v2.14.0
+        uses: step-security/harden-runner@e14015d583714f6e62063499dc959a02595150a1 # v2.21.1
         with:
           egress-policy: audit # TODO: change to 'egress-policy: block' after reviewing egress traffic
           disable-sudo: true
@@ -42,7 +42,7 @@ jobs:
       # See: https://github.com/actions/create-github-app-token
       - name: Generate GitHub App Token
         id: app-token
-        uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         with:
           app-id: ${{ vars.RELEASE_APP_ID }}
           private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
@@ -50,7 +50,7 @@ jobs:
       # Checkout the repository
       # fetch-depth: 0 is required for semantic-release to analyze full commit history
       - name: Checkout repository
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
           token: ${{ steps.app-token.outputs.token }}
