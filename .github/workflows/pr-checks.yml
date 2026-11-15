@@ -1,0 +1,20 @@
+---
+name: PR checks
+
+"on":
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pr-title:
+    uses: iamrobertyoung/.github/.github/workflows/pr-title.yml@v1
+
+  gitleaks:
+    uses: iamrobertyoung/.github/.github/workflows/gitleaks.yml@v1
