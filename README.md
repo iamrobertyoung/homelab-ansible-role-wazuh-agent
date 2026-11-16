@@ -2,8 +2,6 @@
 
 [![Lint](https://github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent/actions/workflows/lint.yml/badge.svg)](https://github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent/actions/workflows/lint.yml)
 [![Release](https://github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent/actions/workflows/release.yml/badge.svg)](https://github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent/actions/workflows/release.yml)
-[![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://slsa.dev)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent/badge)](https://scorecard.dev/viewer/?uri=github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Ansible role for installing and configuring the Wazuh agent on Debian/Ubuntu systems.
@@ -67,29 +65,6 @@ ansible-galaxy install -r requirements.yml
 - Wazuh agent package
 - Agent configuration (`/var/ossec/etc/ossec.conf`)
 - Agent service enabled and started
-
-## Supply Chain Security
-
-This project implements [SLSA](https://slsa.dev/) Level 3 provenance for release artifacts.
-
-- Provenance attestations are submitted to [GitHub Attestations](https://github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent/attestations)
-- Release artifacts include `.intoto.jsonl` provenance files
-- Security posture tracked via [OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent)
-
-### Verifying Release Provenance
-
-```bash
-# Using GitHub CLI (recommended)
-gh attestation verify wazuh_agent-<VERSION>.tar.gz \
-  --repo iamrobertyoung/homelab-ansible-role-wazuh-agent
-
-# Or using slsa-verifier
-VERSION="v1.2.0"  # Replace with desired version
-slsa-verifier verify-artifact wazuh_agent-${VERSION}.tar.gz \
-  --provenance-path wazuh_agent-${VERSION}.tar.gz.intoto.jsonl \
-  --source-uri github.com/iamrobertyoung/homelab-ansible-role-wazuh-agent \
-  --source-tag "${VERSION}"
-```
 
 ## License
 
