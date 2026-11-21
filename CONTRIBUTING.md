@@ -5,7 +5,7 @@ Thank you for considering contributing to this Ansible role.
 ## Development Setup
 
 1. **Prerequisites**
-   - Python 3.11+
+   - Python 3.13+
    - Docker (for Molecule testing)
    - [mise](https://mise.jdx.dev/) for tool version management
 
