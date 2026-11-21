@@ -11,11 +11,19 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "09:00"
-    # Group all GitHub Actions updates into a single PR
+    # Majors get their own PR so a breaking update does not hold back minor and patch updates
     groups:
-      github-actions:
+      actions:
         patterns:
           - "*"
+        update-types:
+          - "minor"
+          - "patch"
+      actions-major:
+        patterns:
+          - "*"
+        update-types:
+          - "major"
     # Auto-label PRs for easier filtering
     labels:
       - "dependencies"
@@ -37,6 +45,18 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "09:00"
+    groups:
+      pip:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+      pip-major:
+        patterns:
+          - "*"
+        update-types:
+          - "major"
     labels:
       - "dependencies"
       - "python"
